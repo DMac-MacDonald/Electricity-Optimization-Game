@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://chlvl1t4otcpv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jfmsc"]
+bg_color = Color(0.479825, 0.62649, 0.689485, 1)
+
+[sub_resource type="Theme" id="Theme_i0jt3"]
+Panel/styles/panel = SubResource("StyleBoxFlat_jfmsc")
+
+[node name="LevelSelect" type="Panel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_i0jt3")
