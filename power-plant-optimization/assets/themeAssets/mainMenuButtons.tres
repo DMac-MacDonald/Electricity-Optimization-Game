@@ -32,6 +32,7 @@ Button/colors/background_color = Color(0.249312, 0.215556, 0.534643, 1)
 Button/colors/font_color = Color(0, 0, 0, 1)
 Button/colors/font_focus_color = Color(0, 0, 0, 1)
 Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/font_sizes/font_size = 30
 Button/styles/focus = SubResource("StyleBoxFlat_ovhon")
 Button/styles/hover = SubResource("StyleBoxFlat_4dhsw")
 Button/styles/hover_pressed = ExtResource("1_cs25c")
