@@ -14,4 +14,6 @@ func _process(delta: float) -> void:
 
 
 func _on_exit_button_pressed() -> void:
+	if get_parent().get_class() == "TextureRect":
+		get_tree().paused = false
 	queue_free()
