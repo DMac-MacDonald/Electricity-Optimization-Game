@@ -1,0 +1,181 @@
+[gd_scene load_steps=4 format=3 uid="uid://diwjjv6wlymb3"]
+
+[ext_resource type="Script" uid="uid://c81xk772yv44x" path="res://assets/scripts/ui/level_select_ui.gd" id="1_qj7ml"]
+[ext_resource type="Texture2D" uid="uid://bhmhe6h766fo0" path="res://assets/icons/question.png" id="1_ui1bh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ra8qi"]
+bg_color = Color(0.625597, 0.625597, 0.625597, 1)
+
+[node name="LevelSelectUI" type="CanvasLayer"]
+script = ExtResource("1_qj7ml")
+
+[node name="SidebarPanel" type="Panel" parent="."]
+custom_minimum_size = Vector2(250, 0)
+offset_left = 902.0
+offset_right = 1152.0
+offset_bottom = 648.0
+size_flags_horizontal = 8
+theme_override_styles/panel = SubResource("StyleBoxFlat_ra8qi")
+
+[node name="MarginContainer" type="MarginContainer" parent="SidebarPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SidebarPanel/MarginContainer"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+
+[node name="TopContainer" type="HBoxContainer" parent="SidebarPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="HelpCatButton" type="Button" parent="SidebarPanel/MarginContainer/VBoxContainer/TopContainer"]
+z_index = 1
+texture_filter = 4
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 8
+icon = ExtResource("1_ui1bh")
+flat = true
+expand_icon = true
+
+[node name="LevelSetContainer" type="ScrollContainer" parent="SidebarPanel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+size_flags_vertical = 2
+scroll_vertical_custom_step = -0.5
+vertical_scroll_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SidebarPanel/MarginContainer/VBoxContainer/LevelSetContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 3
+
+[node name="Button" type="Button" parent="SidebarPanel/MarginContainer/VBoxContainer/LevelSetContainer/VBoxContainer"]
+z_index = 1
+custom_minimum_size = Vector2(230, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "1"
+
+[node name="Button2" type="Button" parent="SidebarPanel/MarginContainer/VBoxContainer/LevelSetContainer/VBoxContainer"]
+z_index = 1
+custom_minimum_size = Vector2(230, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "2"
+
+[node name="Button3" type="Button" parent="SidebarPanel/MarginContainer/VBoxContainer/LevelSetContainer/VBoxContainer"]
+z_index = 1
+custom_minimum_size = Vector2(230, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "3"
+
+[node name="Button4" type="Button" parent="SidebarPanel/MarginContainer/VBoxContainer/LevelSetContainer/VBoxContainer"]
+z_index = 1
+custom_minimum_size = Vector2(230, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "4"
+
+[node name="Button5" type="Button" parent="SidebarPanel/MarginContainer/VBoxContainer/LevelSetContainer/VBoxContainer"]
+z_index = 1
+custom_minimum_size = Vector2(230, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "5"
+
+[node name="Button6" type="Button" parent="SidebarPanel/MarginContainer/VBoxContainer/LevelSetContainer/VBoxContainer"]
+z_index = 1
+custom_minimum_size = Vector2(230, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "6"
+
+[node name="Button7" type="Button" parent="SidebarPanel/MarginContainer/VBoxContainer/LevelSetContainer/VBoxContainer"]
+z_index = 1
+custom_minimum_size = Vector2(230, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "7"
+
+[node name="Button8" type="Button" parent="SidebarPanel/MarginContainer/VBoxContainer/LevelSetContainer/VBoxContainer"]
+z_index = 1
+custom_minimum_size = Vector2(230, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "8"
+
+[node name="Button9" type="Button" parent="SidebarPanel/MarginContainer/VBoxContainer/LevelSetContainer/VBoxContainer"]
+z_index = 1
+custom_minimum_size = Vector2(230, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "9"
+
+[node name="Button10" type="Button" parent="SidebarPanel/MarginContainer/VBoxContainer/LevelSetContainer/VBoxContainer"]
+z_index = 1
+custom_minimum_size = Vector2(230, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "10"
+
+[node name="Button11" type="Button" parent="SidebarPanel/MarginContainer/VBoxContainer/LevelSetContainer/VBoxContainer"]
+z_index = 1
+custom_minimum_size = Vector2(230, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "11"
+
+[node name="Button12" type="Button" parent="SidebarPanel/MarginContainer/VBoxContainer/LevelSetContainer/VBoxContainer"]
+z_index = 1
+custom_minimum_size = Vector2(230, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "12"
+
+[node name="TabContainer" type="HBoxContainer" parent="SidebarPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+alignment = 1
+
+[node name="Tab1Button" type="Button" parent="SidebarPanel/MarginContainer/VBoxContainer/TabContainer"]
+z_index = 1
+custom_minimum_size = Vector2(30, 20)
+layout_mode = 2
+text = "Tab1"
+
+[node name="Tab2Button" type="Button" parent="SidebarPanel/MarginContainer/VBoxContainer/TabContainer"]
+z_index = 1
+custom_minimum_size = Vector2(30, 20)
+layout_mode = 2
+text = "Tab2"
+
+[node name="Tab3Button" type="Button" parent="SidebarPanel/MarginContainer/VBoxContainer/TabContainer"]
+z_index = 1
+custom_minimum_size = Vector2(30, 20)
+layout_mode = 2
+text = "Tab3"
+
+[node name="Tab4Button" type="Button" parent="SidebarPanel/MarginContainer/VBoxContainer/TabContainer"]
+z_index = 1
+custom_minimum_size = Vector2(30, 20)
+layout_mode = 2
+text = "Tab4"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="SidebarPanel/MarginContainer/VBoxContainer"]
+z_index = 1
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+size_flags_vertical = 2
+text = "Level Description here:"

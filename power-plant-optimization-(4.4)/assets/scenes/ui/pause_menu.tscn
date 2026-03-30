@@ -1,0 +1,82 @@
+[gd_scene load_steps=5 format=3 uid="uid://cetfi5m67igv"]
+
+[ext_resource type="Theme" uid="uid://2wlch2h2ytuy" path="res://assets/themeAssets/pauseButton.tres" id="1_66a8n"]
+[ext_resource type="Script" uid="uid://cv2v82n7b3lbs" path="res://assets/scripts/ui/pause_menu.gd" id="1_234u8"]
+[ext_resource type="Texture2D" uid="uid://b7ro2vlb2qo0t" path="res://assets/sprites/grid.jpg" id="2_mqbk4"]
+[ext_resource type="Theme" uid="uid://2krwftmxiefp" path="res://assets/themeAssets/title.tres" id="3_4ph20"]
+
+[node name="PauseMenu" type="CanvasLayer"]
+process_mode = 2
+script = ExtResource("1_234u8")
+
+[node name="Background" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_mqbk4")
+
+[node name="Foreground" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.560784)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -104.5
+offset_right = 150.0
+offset_bottom = 104.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="MenuTitle" type="Label" parent="MarginContainer/VBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("3_4ph20")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "PAUSE MENU"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/separation = 10
+
+[node name="ResumeButton" type="Button" parent="MarginContainer/VBoxContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_66a8n")
+text = "Resume"
+
+[node name="SettingsButton" type="Button" parent="MarginContainer/VBoxContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_66a8n")
+text = "Settings"
+
+[node name="QuitButton" type="Button" parent="MarginContainer/VBoxContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_66a8n")
+text = "Quit to menu"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer2/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer2/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer2/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
