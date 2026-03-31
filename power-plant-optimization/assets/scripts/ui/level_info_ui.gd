@@ -9,7 +9,9 @@ var title = ""
 var type = ""
 var description = ""
 func _ready() -> void:
+	level_file = Global.level_file
 	if level_file != "N/A":
+		print("loading info for [" + level_file + "]" )
 		var level_dict = {}
 		var file = FileAccess.open(Global.savePath + "/" + level_file , FileAccess.READ)
 		print("loading " + str(level_file))
@@ -27,12 +29,12 @@ func _ready() -> void:
 		author = level_dict["level_author"]
 		length = level_dict["level_length"]
 		image = level_dict["level_image"]
-		title = level_dict["level_title"]
+		title = level_dict["level_name"]
 		type = level_dict["level_type"]
 		description = level_dict["level_description"]
 		
 		%LevelTitle.text = title
-		%LevelType.text = type
+		%LevelType.text = "Level Type: " + type
 		#%LevelImage
 		%LevelDescription.text = description
 		%DiffLabel.text = difficulty
@@ -43,4 +45,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	level_file = Global.level_file
+	pass
+
+
+func _on_start_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://assets/scenes/levels/level_field.tscn")

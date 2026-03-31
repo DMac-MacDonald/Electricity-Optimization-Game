@@ -11,7 +11,7 @@ border_width_right = 1
 border_color = Color(0.462291, 0.462291, 0.46229, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wvv0f"]
-bg_color = Color(0.0636486, 0.313341, 0.614505, 1)
+bg_color = Color(0.3206001, 0.42164195, 0.47545463, 1)
 
 [resource]
 Button/font_sizes/font_size = 16

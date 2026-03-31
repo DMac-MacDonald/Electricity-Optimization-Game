@@ -1,6 +1,6 @@
 extends Button
 var file
-
+signal showInfo(path)
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -16,3 +16,5 @@ func set_values(levelName,path):
 
 func _on_pressed() -> void:
 	Global.level_file = file
+	emit_signal("showInfo", file)
+	

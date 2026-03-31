@@ -117,7 +117,8 @@ size_flags_vertical = 3
 layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxLine_wevku")
 
-[node name="LevelInfoContainer" type="Panel" parent="MarginContainer/Panel/HBoxContainer" unique_id=721707565]
+[node name="LevelInfoContainer" type="Panel" parent="MarginContainer/Panel/HBoxContainer" unique_id=721707565 groups=["levelInfoContainer"]]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_apu6u")
