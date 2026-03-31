@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://bkspdkacskbv5"]
+
+[ext_resource type="StyleBox" uid="uid://dncv1sbulovvu" path="res://assets/themeAssets/levelSelectButton.tres" id="1_wred5"]
+[ext_resource type="Script" uid="uid://cv5q3svb60ff6" path="res://assets/scripts/ui/level_select_button.gd" id="2_lbrvy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dxtph"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_bottom = 2
+expand_margin_right = 32.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lvdel"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_bottom = 2
+expand_margin_right = 32.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y78xk"]
+bg_color = Color(0.6, 0.6, 0.6, 0.3372549)
+border_width_left = 2
+border_width_top = 2
+border_width_bottom = 2
+expand_margin_right = 32.0
+
+[sub_resource type="Theme" id="Theme_lbrvy"]
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/styles/focus = SubResource("StyleBoxFlat_dxtph")
+Button/styles/hover = SubResource("StyleBoxFlat_lvdel")
+Button/styles/normal = ExtResource("1_wred5")
+Button/styles/pressed = SubResource("StyleBoxFlat_y78xk")
+
+[node name="LevelSelectButton" type="Button" unique_id=1535100177]
+z_index = 1
+custom_minimum_size = Vector2(200, 0)
+offset_right = 8.0
+offset_bottom = 8.0
+size_flags_horizontal = 4
+theme = SubResource("Theme_lbrvy")
+script = ExtResource("2_lbrvy")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -4,12 +4,21 @@ const PAUSE = preload("res://assets/scenes/ui/pause_menu.tscn")
 const SETTINGS = preload("res://assets/scenes/ui/settings_ui.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var test_dict = {
+	#test save file writing
+	var level1dict = {
+		"level_name" : "Beginner level",
+		"level_type" : "Crisis",
+		"level_description": "Easy level to introduce new players to the game" ,
+		"level_difficulty": "1/5",
+		"level_length": "~30 minutes",
+		"level_author": "Base game",
+		"level_image" : "N/A",
 		"plant_names" : ["Pink Plant", "Red Plant", "Blue Plant", "Green Plant", "Yellow Plant"],
 		"plant_types" : ["Solar", "Nuclear", "Conc Solar", "Hydro", "Wind"]
+		
 	}
-	var save_file = FileAccess.open("res://assets/misc/plants.save", FileAccess.WRITE)
-	var json_string = JSON.stringify(test_dict)
+	var save_file = FileAccess.open("res://save_files/level1.save", FileAccess.WRITE)
+	var json_string = JSON.stringify(level1dict)
 	save_file.store_line(json_string)
 
 

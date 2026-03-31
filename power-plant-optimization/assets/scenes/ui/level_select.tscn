@@ -1,0 +1,123 @@
+[gd_scene format=3 uid="uid://c0cm20gjjesgp"]
+
+[ext_resource type="Texture2D" uid="uid://b7ro2vlb2qo0t" path="res://assets/sprites/grid.jpg" id="1_6e5q7"]
+[ext_resource type="Theme" uid="uid://cel810dix5rh3" path="res://assets/themeAssets/levelSelect.tres" id="2_072rv"]
+[ext_resource type="Script" uid="uid://jmp4bch1kgtg" path="res://assets/scripts/ui/level_select.gd" id="2_rhrxl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vomi7"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_vomi7"]
+color = Color(1, 1, 1, 1)
+grow_begin = 0.0
+grow_end = 5.0
+thickness = 3
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_wevku"]
+color = Color(1, 1, 1, 1)
+grow_begin = 0.0
+grow_end = 0.0
+thickness = 3
+vertical = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_apu6u"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="LevelSelect" type="TextureRect" unique_id=2098574825]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_6e5q7")
+script = ExtResource("2_rhrxl")
+
+[node name="Panel" type="Panel" parent="." unique_id=271553804]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=346755194]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 100
+
+[node name="Panel" type="Panel" parent="MarginContainer" unique_id=2059213731]
+z_index = 1
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vomi7")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Panel" unique_id=1462347012]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/HBoxContainer" unique_id=1415958658]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Panel/HBoxContainer/MarginContainer" unique_id=2134482322]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Button" type="Button" parent="MarginContainer/Panel/HBoxContainer/MarginContainer/VBoxContainer" unique_id=1396255512]
+z_index = 1
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("2_072rv")
+text = "Create Level"
+
+[node name="Button2" type="Button" parent="MarginContainer/Panel/HBoxContainer/MarginContainer/VBoxContainer" unique_id=146383030]
+z_index = 1
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("2_072rv")
+text = "Import Level"
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/Panel/HBoxContainer/MarginContainer/VBoxContainer" unique_id=403092788]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_vomi7")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/Panel/HBoxContainer/MarginContainer/VBoxContainer" unique_id=1024450817]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 3
+theme = ExtResource("2_072rv")
+vertical_scroll_mode = 3
+
+[node name="LevelContainer" type="VBoxContainer" parent="MarginContainer/Panel/HBoxContainer/MarginContainer/VBoxContainer/ScrollContainer" unique_id=424722629]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(253, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/Panel/HBoxContainer" unique_id=2016076925]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_wevku")
+
+[node name="LevelInfoContainer" type="Panel" parent="MarginContainer/Panel/HBoxContainer" unique_id=721707565]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_apu6u")

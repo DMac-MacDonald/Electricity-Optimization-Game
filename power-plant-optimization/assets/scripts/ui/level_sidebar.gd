@@ -3,7 +3,7 @@ extends CanvasLayer
 var PCARD = preload("res://assets/scenes/ui/plant_card.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	load_plant_cards("res://assets/misc/plants.save")
+	load_plant_cards("res://save_files/plants.save")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

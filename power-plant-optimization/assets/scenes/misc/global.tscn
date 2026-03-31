@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://clbxo7gmu57g0"]
+
+[ext_resource type="Script" uid="uid://cjw48oj4nh82k" path="res://assets/scripts/misc/global.gd" id="1_hy766"]
+
+[node name="global" type="Node" unique_id=1412284819]
+process_mode = 3
+script = ExtResource("1_hy766")
+
+[connection signal="level_chosen" from="." to="." method="_on_level_chosen"]
