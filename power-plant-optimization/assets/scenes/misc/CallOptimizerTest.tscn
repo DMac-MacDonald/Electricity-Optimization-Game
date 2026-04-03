@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cnw2v08quxu34"]
+
+[ext_resource type="Script" uid="uid://dmt45arliavtu" path="res://assets/scripts/misc/call_optimizer.gd" id="1_jua5u"]
+
+[node name="CallOptimizerTest" type="Node2D" unique_id=1011024696]
+script = ExtResource("1_jua5u")
