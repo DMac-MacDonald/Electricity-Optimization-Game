@@ -1,32 +1,24 @@
 [gd_scene format=3 uid="uid://d2xe1m4gc7cnc"]
 
-[ext_resource type="Script" path="res://assets/scripts/power_plant.py" id="1_8o8b1"]
+[ext_resource type="Texture2D" uid="uid://c0paxn67yixhg" path="res://assets/icons/cylinder1.png" id="1_167sy"]
+[ext_resource type="Script" uid="uid://idplgrju2k5e" path="res://assets/scripts/levels/power_plant.gd" id="2_167sy"]
 
-[node name="PowerPlant" type="Node2D" unique_id=1520317629]
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-visible = true
-modulate = Color(1, 1, 1, 1)
-self_modulate = Color(1, 1, 1, 1)
-show_behind_parent = false
-top_level = false
-clip_children = 0
-light_mask = 1
-visibility_layer = 1
-z_index = 0
-z_as_relative = true
-y_sort_enabled = false
-texture_filter = 0
-texture_repeat = 0
-use_parent_material = false
-position = Vector2(0, 0)
-rotation = 0.0
-scale = Vector2(1, 1)
-skew = 0.0
-script = ExtResource("1_8o8b1")
+[node name="PowerPlant" type="Sprite2D" unique_id=1063473356]
+modulate = Color(0.16862746, 1, 1, 1)
+texture = ExtResource("1_167sy")
+script = ExtResource("2_167sy")
+
+[node name="Button" type="Button" parent="." unique_id=1290478844]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -256.0
+offset_top = -256.0
+offset_right = -256.0
+offset_bottom = -256.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
