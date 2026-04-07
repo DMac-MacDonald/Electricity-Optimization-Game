@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://3vjcq2v6wxav" path="res://assets/scripts/ui/level_sidebar.gd" id="1_61hfx"]
 [ext_resource type="Theme" uid="uid://4kic8g28utkv" path="res://assets/themeAssets/sidebar_default.tres" id="1_ylimu"]
 [ext_resource type="Theme" uid="uid://2krwftmxiefp" path="res://assets/themeAssets/title.tres" id="4_wbtbu"]
+[ext_resource type="ButtonGroup" uid="uid://d1m1rpi0pnu7f" path="res://assets/themeAssets/sidebarTabGroup.tres" id="5_tyiyf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wbtbu"]
 bg_color = Color(0.165656, 0.165656, 0.165656, 1)
@@ -20,6 +21,7 @@ border_width_right = 1
 border_width_bottom = 1
 
 [node name="LevelSidebar" type="CanvasLayer" unique_id=1449868334]
+layer = 0
 script = ExtResource("1_61hfx")
 
 [node name="SidebarPanel" type="Panel" parent="." unique_id=813245904]
@@ -32,6 +34,7 @@ grow_horizontal = 0
 grow_vertical = 2
 scale = Vector2(1, 0.990073)
 size_flags_horizontal = 8
+mouse_filter = 1
 theme = ExtResource("1_ylimu")
 
 [node name="MarginContainer" type="MarginContainer" parent="SidebarPanel" unique_id=734056150]
@@ -123,33 +126,41 @@ custom_minimum_size = Vector2(80, 20)
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("1_ylimu")
-text = "Plant info"
+toggle_mode = true
+button_group = ExtResource("5_tyiyf")
+text = "Metrics"
 autowrap_mode = 3
 
-[node name="Tab1Button2" type="Button" parent="SidebarPanel/MarginContainer/VBoxContainer/VBoxContainer/TabContainer" unique_id=308623914]
+[node name="Tab2Button" type="Button" parent="SidebarPanel/MarginContainer/VBoxContainer/VBoxContainer/TabContainer" unique_id=308623914]
 z_index = 1
 custom_minimum_size = Vector2(80, 20)
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("1_ylimu")
+toggle_mode = true
+button_group = ExtResource("5_tyiyf")
 text = "Demand"
 autowrap_mode = 3
 
-[node name="Tab1Button3" type="Button" parent="SidebarPanel/MarginContainer/VBoxContainer/VBoxContainer/TabContainer" unique_id=940405915]
+[node name="Tab3Button" type="Button" parent="SidebarPanel/MarginContainer/VBoxContainer/VBoxContainer/TabContainer" unique_id=940405915]
 z_index = 1
 custom_minimum_size = Vector2(80, 20)
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("1_ylimu")
+toggle_mode = true
+button_group = ExtResource("5_tyiyf")
 text = "Advanced"
 autowrap_mode = 3
 
-[node name="Tab1Button4" type="Button" parent="SidebarPanel/MarginContainer/VBoxContainer/VBoxContainer/TabContainer" unique_id=850660294]
+[node name="Tab4Button" type="Button" parent="SidebarPanel/MarginContainer/VBoxContainer/VBoxContainer/TabContainer" unique_id=850660294]
 z_index = 1
 custom_minimum_size = Vector2(80, 20)
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("1_ylimu")
+toggle_mode = true
+button_group = ExtResource("5_tyiyf")
 text = "Misc"
 autowrap_mode = 3
 
@@ -162,3 +173,8 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 13.1
 theme = ExtResource("1_ylimu")
 theme_override_styles/panel = SubResource("StyleBoxFlat_61hfx")
+
+[connection signal="toggled" from="SidebarPanel/MarginContainer/VBoxContainer/VBoxContainer/TabContainer/Tab1Button" to="." method="_on_tab_1_button_toggled"]
+[connection signal="toggled" from="SidebarPanel/MarginContainer/VBoxContainer/VBoxContainer/TabContainer/Tab2Button" to="." method="_on_tab_2_button_toggled"]
+[connection signal="toggled" from="SidebarPanel/MarginContainer/VBoxContainer/VBoxContainer/TabContainer/Tab3Button" to="." method="_on_tab_3_button_toggled"]
+[connection signal="toggled" from="SidebarPanel/MarginContainer/VBoxContainer/VBoxContainer/TabContainer/Tab4Button" to="." method="_on_tab_4_button_toggled"]

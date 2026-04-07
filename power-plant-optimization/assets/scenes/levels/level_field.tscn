@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://c717747ypbrgo"]
 
 [ext_resource type="Script" uid="uid://dtyvfeehopm5b" path="res://assets/scripts/levels/level_field.gd" id="1_uk5jp"]
+[ext_resource type="Texture2D" uid="uid://60287aeqqn6o" path="res://assets/sprites/map.jpg" id="1_xbeld"]
+[ext_resource type="PackedScene" uid="uid://chm1bwdsbul6q" path="res://assets/scenes/ui/level_ui.tscn" id="3_uq7dw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xbeld"]
 
@@ -15,3 +17,17 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_uq7dw")
 script = ExtResource("1_uk5jp")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1493616052]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_xbeld")
+expand_mode = 1
+
+[node name="LevelUi" parent="." unique_id=1124139367 instance=ExtResource("3_uq7dw")]
+layer = 0

@@ -1,5 +1,5 @@
 extends Sprite2D
-
+const QINFO = preload("res://assets/scenes/levels/quick_info_panel.tscn")
 var dragging = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -8,7 +8,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if dragging:
+	if dragging and Global.control_mode == "drag":
 		position = get_viewport().get_mouse_position()
 
 
@@ -18,3 +18,15 @@ func _on_button_button_down() -> void:
 	
 func _on_button_button_up() -> void:
 	dragging = false
+
+
+func _on_button_pressed() -> void:
+	if Global.control_mode == "cursor":
+		for n in get_children():
+			if n.is_in_group("info_popup"):
+				remove_child(n)
+				n.queue_free()
+				
+		var info = QINFO.instantiate()
+		add_child(info)
+		

@@ -5,6 +5,8 @@
 
 [node name="PowerPlant" type="Sprite2D" unique_id=1063473356]
 modulate = Color(0.16862746, 1, 1, 1)
+z_index = 2
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_167sy")
 script = ExtResource("2_167sy")
 
@@ -22,3 +24,4 @@ grow_vertical = 2
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
 [connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

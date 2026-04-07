@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://chm1bwdsbul6q"]
+
+[ext_resource type="StyleBox" uid="uid://bvmhjfw5pjqjh" path="res://assets/themeAssets/levelUiButtonHover.tres" id="1_1yexk"]
+[ext_resource type="Script" uid="uid://cv255nwop06bg" path="res://assets/scripts/ui/level_ui.gd" id="1_he7lk"]
+[ext_resource type="StyleBox" uid="uid://cnqferobbcai2" path="res://assets/themeAssets/levelUiButtonNormal.tres" id="2_u8kef"]
+[ext_resource type="Texture2D" uid="uid://coagxdt831piq" path="res://assets/icons/palm.svg" id="3_io1ka"]
+[ext_resource type="Texture2D" uid="uid://ccgcc5f051ou6" path="res://assets/icons/cursor.svg" id="4_1vmky"]
+[ext_resource type="ButtonGroup" uid="uid://wdsxrytwmw15" path="res://assets/themeAssets/levelUiGroup.tres" id="4_tw2xs"]
+[ext_resource type="Texture2D" uid="uid://2iw7v6ai0nhv" path="res://assets/icons/zoom-in.svg" id="5_he7lk"]
+[ext_resource type="Texture2D" uid="uid://c5jfmx2115ypk" path="res://assets/icons/zoom-out.svg" id="6_tw2xs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1vmky"]
+bg_color = Color(0.15294118, 0.15294118, 0.15294118, 0.47843137)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1yexk"]
+bg_color = Color(0.15294118, 0.15294118, 0.15294118, 0.24313726)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_blend = true
+
+[sub_resource type="Theme" id="Theme_he7lk"]
+Button/styles/focus = SubResource("StyleBoxFlat_1vmky")
+Button/styles/hover = ExtResource("1_1yexk")
+Button/styles/normal = ExtResource("2_u8kef")
+Button/styles/pressed = SubResource("StyleBoxFlat_1yexk")
+
+[node name="LevelUi" type="CanvasLayer" unique_id=1124139367]
+layer = 0
+script = ExtResource("1_he7lk")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1134719318]
+offset_right = 132.0
+offset_bottom = 30.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="CursorButton" type="Button" parent="HBoxContainer" unique_id=901583305]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+mouse_filter = 1
+theme = SubResource("Theme_he7lk")
+toggle_mode = true
+button_group = ExtResource("4_tw2xs")
+icon = ExtResource("4_1vmky")
+expand_icon = true
+
+[node name="HandButton" type="Button" parent="HBoxContainer" unique_id=2075692934]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+mouse_filter = 1
+theme = SubResource("Theme_he7lk")
+toggle_mode = true
+button_group = ExtResource("4_tw2xs")
+icon = ExtResource("3_io1ka")
+expand_icon = true
+
+[node name="ZoomInButton" type="Button" parent="HBoxContainer" unique_id=1896534718]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+mouse_filter = 1
+theme = SubResource("Theme_he7lk")
+icon = ExtResource("5_he7lk")
+expand_icon = true
+
+[node name="ZoomOutButton" type="Button" parent="HBoxContainer" unique_id=1726954770]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+mouse_filter = 1
+theme = SubResource("Theme_he7lk")
+icon = ExtResource("6_tw2xs")
+expand_icon = true
+
+[connection signal="toggled" from="HBoxContainer/CursorButton" to="." method="_on_cursor_button_toggled"]
+[connection signal="toggled" from="HBoxContainer/HandButton" to="." method="_on_hand_button_toggled"]

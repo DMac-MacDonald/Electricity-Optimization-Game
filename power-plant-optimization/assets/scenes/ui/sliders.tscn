@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://bouewg5v23t55"]
+
+[node name="sliders" type="MarginContainer" unique_id=613972656]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1262523328]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=858168350]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=1666635997]
+layout_mode = 2
+text = "Stat 1"
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/HBoxContainer" unique_id=1411882071]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=120756290]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2" unique_id=1046279020]
+layout_mode = 2
+text = "Stat 2"
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/HBoxContainer2" unique_id=253139055]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer" unique_id=1951580122]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer3" unique_id=213515598]
+layout_mode = 2
+text = "Stat 3"
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/HBoxContainer3" unique_id=1288753045]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer" unique_id=2060848815]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer4" unique_id=1728794396]
+layout_mode = 2
+text = "Stat 4"
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/HBoxContainer4" unique_id=2048929983]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer" unique_id=679713111]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer5" unique_id=184455133]
+layout_mode = 2
+text = "Stat 5"
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/HBoxContainer5" unique_id=661461569]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4

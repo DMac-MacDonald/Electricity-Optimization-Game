@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 var PCARD = preload("res://assets/scenes/ui/plant_card.tscn")
+var SLIDE = preload("res://assets/scenes/ui/sliders.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	load_plant_cards("res://save_files/level1.save")
@@ -37,3 +38,28 @@ func load_plant_cards(filepath):
 
 		
 		
+
+
+
+
+func _on_tab_1_button_toggled(toggled_on: bool) -> void:
+	for n in %TabInfoContainer.get_children():
+		%TabInfoContainer.remove_child(n)
+		n.queue_free() 
+	var sliders = SLIDE.instantiate()
+	%TabInfoContainer.add_child(sliders)
+
+func _on_tab_2_button_toggled(toggled_on: bool) -> void:
+	for n in %TabInfoContainer.get_children():
+		%TabInfoContainer.remove_child(n)
+		n.queue_free() 
+
+func _on_tab_3_button_toggled(toggled_on: bool) -> void:
+	for n in %TabInfoContainer.get_children():
+		%TabInfoContainer.remove_child(n)
+		n.queue_free() 
+
+func _on_tab_4_button_toggled(toggled_on: bool) -> void:
+	for n in %TabInfoContainer.get_children():
+		%TabInfoContainer.remove_child(n)
+		n.queue_free() 

@@ -2,6 +2,7 @@ extends Node
 var savePath = "res://save_files"
 var saveDirectory := DirAccess.open(savePath)
 var level_file = "N/A"
+var control_mode = "cursor"
 signal level_chosen
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
