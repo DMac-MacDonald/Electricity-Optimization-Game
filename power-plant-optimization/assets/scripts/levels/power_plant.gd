@@ -32,3 +32,5 @@ func _on_button_pressed() -> void:
 			var info = QINFO.instantiate()
 			add_child(info)
 		
+func set_color(rgb):
+	modulate = rgb

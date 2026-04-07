@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://in8owa3imrcv"]
+
+[node name="bottomBar" type="VBoxContainer" unique_id=893032899]
+offset_right = 672.0
+offset_bottom = 57.0
+theme_override_constants/separation = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1038261270]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Button" type="Button" parent="HBoxContainer" unique_id=1709218897]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "Timeline"
+
+[node name="Button2" type="Button" parent="HBoxContainer" unique_id=982186343]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "Toolbox"
+
+[node name="Button3" type="Button" parent="HBoxContainer" unique_id=172401775]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "Misc"
+
+[node name="Panel" type="Panel" parent="." unique_id=1920393385]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="ProgressBar" type="TextureProgressBar" parent="Panel" unique_id=1978812135]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -13.5
+offset_bottom = 13.5
+grow_horizontal = 2
+grow_vertical = 2
+tint_under = Color(0, 0.76667637, 0.76667607, 1)
+tint_over = Color(0.101960786, 1, 1, 1)

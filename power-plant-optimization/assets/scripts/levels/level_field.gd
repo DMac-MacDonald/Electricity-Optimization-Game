@@ -56,5 +56,6 @@ func spawn_plants(dict):
 		var yPos = randi_range(50, 600)
 		var plant = PLANT.instantiate()
 		add_child(plant)
+		plant.set_color(Color.from_hsv(randf(), 0.8, 1.0))
 		plant.position = Vector2(xPos,yPos)
 		print("plant spawned at : ("+ str(xPos) + "," + str(yPos) + ")")
