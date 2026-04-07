@@ -35,7 +35,7 @@ func _ready() -> void:
 		
 		%LevelTitle.text = title
 		%LevelType.text = "Level Type: " + type
-		#%LevelImage
+		%LevelImage.texture = load(image)
 		%LevelDescription.text = description
 		%DiffLabel.text = difficulty
 		%LengthLabel.text = length

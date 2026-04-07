@@ -21,12 +21,14 @@ func _on_button_button_up() -> void:
 
 
 func _on_button_pressed() -> void:
+	var temp = false
 	if Global.control_mode == "cursor":
 		for n in get_children():
 			if n.is_in_group("info_popup"):
+				temp = true
 				remove_child(n)
 				n.queue_free()
-				
-		var info = QINFO.instantiate()
-		add_child(info)
+		if !temp:
+			var info = QINFO.instantiate()
+			add_child(info)
 		

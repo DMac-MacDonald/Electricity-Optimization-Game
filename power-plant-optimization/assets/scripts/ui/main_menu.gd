@@ -12,7 +12,7 @@ func _ready() -> void:
 		"level_difficulty": "2/5",
 		"level_length": "~23 minutes",
 		"level_author": "Base game",
-		"level_image" : "N/A",
+		"level_image" : "res://assets/sprites/map.jpg",
 		"plant_names" : ["Pink Plant", "Red Plant", "Blue Plant", "Green Plant", "Yellow Plant"],
 		"plant_types" : ["Solar", "Nuclear", "Concentrating Solar", "Hydro", "Wind"]
 		
