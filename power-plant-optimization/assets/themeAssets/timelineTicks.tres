@@ -1,0 +1,10 @@
+[gd_resource type="Theme" format=3 uid="uid://c2jvlw525itgj"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_d8i7i"]
+color = Color(1, 1, 1, 1)
+grow_begin = -10.0
+thickness = 3
+vertical = true
+
+[resource]
+VSeparator/styles/separator = SubResource("StyleBoxLine_d8i7i")

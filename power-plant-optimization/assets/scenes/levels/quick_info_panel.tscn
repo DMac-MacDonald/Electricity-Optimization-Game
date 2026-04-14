@@ -46,12 +46,7 @@ layout_mode = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0.69692504, 0.69913924, 1)
 theme_override_font_sizes/font_size = 24
-text = "Stat 1"
-
-[node name="HSlider" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=261768569]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
+text = "Min Output (MW): 200"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=472825661]
 layout_mode = 2
@@ -60,12 +55,7 @@ layout_mode = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0.69692504, 0.69913924, 1)
 theme_override_font_sizes/font_size = 24
-text = "Stat 2"
-
-[node name="HSlider" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1183601592]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
+text = "Max Output(MW):1500"
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=522913609]
 layout_mode = 2
@@ -74,12 +64,7 @@ layout_mode = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0.69692504, 0.69913924, 1)
 theme_override_font_sizes/font_size = 24
-text = "Stat 3"
-
-[node name="HSlider" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1451493097]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
+text = "Cost ($/KWh): 13 cents"
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1971353507]
 layout_mode = 2
@@ -88,12 +73,7 @@ layout_mode = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0.69692504, 0.69913924, 1)
 theme_override_font_sizes/font_size = 24
-text = "Stat 4"
-
-[node name="HSlider" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainer4" unique_id=299724331]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
+text = "H20 (gal/KWh): 6.6"
 
 [node name="HBoxContainer5" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=953946609]
 layout_mode = 2
@@ -102,9 +82,18 @@ layout_mode = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0.69692504, 0.69913924, 1)
 theme_override_font_sizes/font_size = 24
-text = "Stat 5"
+text = "CO2 (CO2e/KWh):0.19"
 
-[node name="HSlider" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainer5" unique_id=659935460]
+[node name="HBoxContainer6" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1908104126]
+layout_mode = 2
+
+[node name="Label6" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer6" unique_id=1245814432]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.69692504, 0.69913924, 1)
+theme_override_font_sizes/font_size = 24
+text = "Output (MW): [1320]"
+
+[node name="HSlider" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainer6" unique_id=782749461]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4

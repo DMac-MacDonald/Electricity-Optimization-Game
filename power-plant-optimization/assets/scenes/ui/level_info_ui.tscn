@@ -42,6 +42,7 @@ horizontal_alignment = 1
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 6
+theme_override_font_sizes/font_size = 24
 text = "Level Type:"
 horizontal_alignment = 1
 
@@ -67,7 +68,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_8noj7")
 [node name="Label" type="Label" parent="VBoxContainer" unique_id=878968193]
 layout_mode = 2
 size_flags_vertical = 6
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 30
 text = "DESCRIPTION:"
 horizontal_alignment = 1
 
@@ -77,10 +78,10 @@ custom_minimum_size = Vector2(270, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 24
 text = "goobagabba"
 horizontal_alignment = 1
-autowrap_mode = 2
+autowrap_mode = 3
 
 [node name="StartButton" type="Button" parent="VBoxContainer" unique_id=1112027195]
 custom_minimum_size = Vector2(100, 0)
