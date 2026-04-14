@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://2ljiqepdmfno"]
+
+[ext_resource type="Texture2D" uid="uid://c1wryanegbxnb" path="res://gifs/pareto.png" id="1_62dvu"]
+
+[node name="MarginContainer" type="MarginContainer" unique_id=718357198]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -5.0
+offset_right = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1947287150]
+layout_mode = 2
+texture = ExtResource("1_62dvu")
+expand_mode = 1

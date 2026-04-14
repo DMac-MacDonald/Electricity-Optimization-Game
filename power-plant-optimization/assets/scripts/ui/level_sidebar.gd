@@ -54,6 +54,8 @@ func _on_tab_2_button_toggled(toggled_on: bool) -> void:
 	for n in %TabInfoContainer.get_children():
 		%TabInfoContainer.remove_child(n)
 		n.queue_free() 
+	var graph = load("res://assets/scenes/ui/graph.tscn").instantiate()
+	%TabInfoContainer.add_child(graph)
 
 func _on_tab_3_button_toggled(toggled_on: bool) -> void:
 	for n in %TabInfoContainer.get_children():
