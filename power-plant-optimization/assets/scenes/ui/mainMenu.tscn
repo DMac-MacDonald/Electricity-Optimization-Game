@@ -5,7 +5,7 @@
 [ext_resource type="Theme" uid="uid://c8rglj08wpjb4" path="res://assets/themeAssets/mainMenuButtons.tres" id="2_wwnvl"]
 [ext_resource type="Theme" uid="uid://2krwftmxiefp" path="res://assets/themeAssets/title.tres" id="3_i3crw"]
 
-[node name="MainMenu" type="TextureRect" unique_id=1441956007]
+[node name="MainMenu" type="TextureRect" unique_id=921211572]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -14,7 +14,7 @@ grow_vertical = 2
 texture = ExtResource("1_wwnvl")
 script = ExtResource("1_o55qt")
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1834986790]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=699427998]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -26,13 +26,12 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer" unique_id=915139263]
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer" unique_id=157947153]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Title" type="Label" parent="MarginContainer/VBoxContainer2" unique_id=1243411979]
-custom_minimum_size = Vector2(300, 0)
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer2" unique_id=143420551]
 layout_mode = 2
 theme = ExtResource("3_i3crw")
 theme_override_font_sizes/font_size = 40
@@ -40,26 +39,26 @@ text = "POWER GRID OPTIMIZATION"
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer2" unique_id=171934770]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer2" unique_id=465365522]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="LevelButton" type="Button" parent="MarginContainer/VBoxContainer2/VBoxContainer" unique_id=1832091971]
+[node name="LevelButton" type="Button" parent="MarginContainer/VBoxContainer2/VBoxContainer" unique_id=805552810]
 custom_minimum_size = Vector2(250, 50)
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("2_wwnvl")
 text = "Levels"
 
-[node name="EditorButton" type="Button" parent="MarginContainer/VBoxContainer2/VBoxContainer" unique_id=1144271674]
+[node name="EditorButton" type="Button" parent="MarginContainer/VBoxContainer2/VBoxContainer" unique_id=1118941251]
 custom_minimum_size = Vector2(250, 50)
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("2_wwnvl")
 text = "Editor"
 
-[node name="SettingsButton" type="Button" parent="MarginContainer/VBoxContainer2/VBoxContainer" unique_id=449883563]
+[node name="SettingsButton" type="Button" parent="MarginContainer/VBoxContainer2/VBoxContainer" unique_id=988167643]
 process_mode = 1
 custom_minimum_size = Vector2(250, 50)
 layout_mode = 2
@@ -67,7 +66,7 @@ size_flags_horizontal = 4
 theme = ExtResource("2_wwnvl")
 text = "Settings"
 
-[node name="QuitButton" type="Button" parent="MarginContainer/VBoxContainer2/VBoxContainer" unique_id=748810255]
+[node name="QuitButton" type="Button" parent="MarginContainer/VBoxContainer2/VBoxContainer" unique_id=117832453]
 custom_minimum_size = Vector2(250, 50)
 layout_mode = 2
 theme = ExtResource("2_wwnvl")
