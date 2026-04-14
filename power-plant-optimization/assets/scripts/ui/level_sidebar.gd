@@ -34,7 +34,7 @@ func load_plant_cards(filepath):
 	
 	for i in range(pNames.size()):
 		var pCard = PCARD.instantiate()
-		pCard.set_values(pNames[i],pTypes[i], i)
+		pCard.set_values(pNames[i],pTypes[i], i, Global.random_color())
 		%PlantCardContainer.add_child(pCard)
 
 		

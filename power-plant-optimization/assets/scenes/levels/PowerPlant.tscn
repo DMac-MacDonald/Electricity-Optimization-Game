@@ -1,13 +1,14 @@
 [gd_scene format=3 uid="uid://d2xe1m4gc7cnc"]
 
-[ext_resource type="Texture2D" uid="uid://c0paxn67yixhg" path="res://assets/icons/cylinder1.png" id="1_167sy"]
+[ext_resource type="SpriteFrames" uid="uid://6a8622oqhalc" path="res://assets/themeAssets/power_plant_sprites.tres" id="1_167sy"]
 [ext_resource type="Script" uid="uid://idplgrju2k5e" path="res://assets/scripts/levels/power_plant.gd" id="2_167sy"]
 
-[node name="PowerPlant" type="Sprite2D" unique_id=1063473356]
+[node name="PowerPlant" type="AnimatedSprite2D" unique_id=1071676892]
 modulate = Color(0.16862746, 1, 1, 1)
 z_index = 2
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("1_167sy")
+scale = Vector2(0.3, 0.3)
+sprite_frames = ExtResource("1_167sy")
+animation = &"hydro"
 script = ExtResource("2_167sy")
 
 [node name="Button" type="Button" parent="." unique_id=1290478844]
@@ -15,12 +16,14 @@ self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -256.0
+offset_left = -128.0
 offset_top = -256.0
-offset_right = -256.0
+offset_right = -128.0
 offset_bottom = -256.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
 [connection signal="button_up" from="Button" to="." method="_on_button_button_up"]

@@ -5,6 +5,8 @@ const BOTTOMBAR = preload("res://assets/scenes/ui/bottom_bar.tscn")
 const PAUSE = preload("res://assets/scenes/ui/pause_menu.tscn")
 const PLANT = preload("res://assets/scenes/levels/PowerPlant.tscn")
 var file
+var pNames = []
+var pTypes = []
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# (50,50) x (1000, 600)
@@ -37,8 +39,6 @@ func _process(delta: float) -> void:
 
 func load_plants(filepath):
 	var plant_dict = {}
-	var pNames = []
-	var pTypes = []
 	var file2 = FileAccess.open(Global.savePath + "/" + file ,FileAccess.READ)
 	while file2.get_position() < file2.get_length():
 		var json_string = file2.get_line()
@@ -58,11 +58,12 @@ func load_plants(filepath):
 		spawn_plants(plant_dict)
 
 func spawn_plants(dict):
-	for plants in dict["plant_names"]:
+	for i in pNames.size():
 		var xPos = randi_range(50, 600)
 		var yPos = randi_range(50, 600)
 		var plant = PLANT.instantiate()
 		add_child(plant)
-		plant.set_color(Color.from_hsv(randf(), 0.8, 1.0))
+		plant.set_type(pTypes[i])
+		plant.set_color(Global.random_color())
 		plant.position = Vector2(xPos,yPos)
 		print("plant spawned at : ("+ str(xPos) + "," + str(yPos) + ")")

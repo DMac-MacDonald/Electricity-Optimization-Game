@@ -9,12 +9,12 @@ custom_minimum_size = Vector2(300, 300)
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -307.0
-offset_top = -1724.0001
-offset_right = 217.0
-offset_bottom = -1400.0
+offset_left = -317.0
+offset_top = -600.0
+offset_right = 207.0
+offset_bottom = -275.99988
 grow_horizontal = 0
-scale = Vector2(5, 5)
+scale = Vector2(2, 2)
 size_flags_horizontal = 4
 theme_override_styles/panel = SubResource("StyleBoxFlat_167sy")
 
@@ -35,7 +35,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=466964521]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0.69692504, 0.69913924, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 24
 text = "Plant Name"
 
@@ -44,7 +44,7 @@ layout_mode = 2
 
 [node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=577755271]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0.69692504, 0.69913924, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 24
 text = "Min Output (MW): 200"
 
@@ -53,7 +53,7 @@ layout_mode = 2
 
 [node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=530095169]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0.69692504, 0.69913924, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 24
 text = "Max Output(MW):1500"
 
@@ -62,7 +62,7 @@ layout_mode = 2
 
 [node name="Label4" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1932987243]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0.69692504, 0.69913924, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 24
 text = "Cost ($/KWh): 13 cents"
 
@@ -71,7 +71,7 @@ layout_mode = 2
 
 [node name="Label5" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4" unique_id=214915574]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0.69692504, 0.69913924, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 24
 text = "H20 (gal/KWh): 6.6"
 
@@ -80,7 +80,7 @@ layout_mode = 2
 
 [node name="Label6" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer5" unique_id=783895477]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0.69692504, 0.69913924, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 24
 text = "CO2 (CO2e/KWh):0.19"
 
@@ -89,7 +89,7 @@ layout_mode = 2
 
 [node name="Label6" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer6" unique_id=1245814432]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0.69692504, 0.69913924, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 24
 text = "Output (MW): [1320]"
 

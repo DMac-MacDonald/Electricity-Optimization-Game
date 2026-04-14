@@ -1,0 +1,90 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://6a8622oqhalc"]
+
+[ext_resource type="Texture2D" uid="uid://bnp2xc7mqti14" path="res://assets/sprites/PowerPlant_Master.png" id="1_j88xg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4dv40"]
+atlas = ExtResource("1_j88xg")
+region = Rect2(1536, 0, 256, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qrlog"]
+atlas = ExtResource("1_j88xg")
+region = Rect2(1024, 0, 256, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wdk3y"]
+atlas = ExtResource("1_j88xg")
+region = Rect2(768, 0, 256, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mpqvn"]
+atlas = ExtResource("1_j88xg")
+region = Rect2(2048, 0, 256, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uf6c5"]
+atlas = ExtResource("1_j88xg")
+region = Rect2(256, 0, 256, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ywxwl"]
+atlas = ExtResource("1_j88xg")
+region = Rect2(512, 0, 256, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e2mov"]
+atlas = ExtResource("1_j88xg")
+region = Rect2(0, 0, 256, 512)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4dv40")
+}],
+"loop": true,
+"name": &"biomass",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qrlog")
+}],
+"loop": true,
+"name": &"coal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wdk3y")
+}],
+"loop": true,
+"name": &"conc_solar",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mpqvn")
+}],
+"loop": true,
+"name": &"hydro",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uf6c5")
+}],
+"loop": true,
+"name": &"nuclear",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ywxwl")
+}],
+"loop": true,
+"name": &"solar",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e2mov")
+}],
+"loop": true,
+"name": &"wind",
+"speed": 5.0
+}]

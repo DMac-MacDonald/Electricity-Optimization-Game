@@ -19,3 +19,6 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+func random_color():
+	return Color.from_hsv(randf(), 0.8, 1.0)

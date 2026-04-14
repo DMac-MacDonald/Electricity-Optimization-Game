@@ -3,6 +3,7 @@ extends Panel
 var pType
 var pName
 var pIndex
+var color
 @onready var name_label: Label = $MarginContainer/HBoxContainer/VBoxContainer/NameLabel
 @onready var info_button: Button = $MarginContainer/HBoxContainer/VBoxContainer/InfoButton
 
@@ -18,14 +19,29 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func set_values(plant_name, plant_type, plant_index):
+func set_values(plant_name, plant_type, plant_index, pColor):
 	pName = plant_name
 	pType = plant_type
 	pIndex = plant_index
-
+	modulate = pColor
+	color = pColor
+	
+	match pType:
+		"Solar":
+			%PlantSprite.play("solar")
+		"Nuclear":
+			%PlantSprite.play("nuclear")
+		"Concentrating Solar":
+			%PlantSprite.play("conc_solar")
+		"Hydro":
+			%PlantSprite.play("hydro")
+		"Wind":
+			%PlantSprite.play("wind")
+		"Coal":
+			%PlantSprite.play("coal")
 func _on_plant_button_pressed() -> void:
 	var pCard = load("res://assets/scenes/ui/plant_card.tscn").instantiate()
-	pCard.set_values(pName,pType,pIndex)
+	pCard.set_values(pName,pType,pIndex,color)
 	var parent = get_parent()
 	
 	if parent != null:

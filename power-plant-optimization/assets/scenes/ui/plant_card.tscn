@@ -1,13 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://b2vfrotv30fj2"]
+[gd_scene format=3 uid="uid://b2vfrotv30fj2"]
 
 [ext_resource type="Theme" uid="uid://cuwwm0viagopy" path="res://assets/themeAssets/plant_container.tres" id="1_nx451"]
-[ext_resource type="Texture2D" uid="uid://c0paxn67yixhg" path="res://assets/icons/cylinder1.png" id="2_ki441"]
 [ext_resource type="Script" uid="uid://c2327bq7q313h" path="res://assets/scripts/levels/plant_card.gd" id="2_lrxi1"]
+[ext_resource type="SpriteFrames" uid="uid://6a8622oqhalc" path="res://assets/themeAssets/power_plant_sprites.tres" id="3_ki441"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nx451"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[node name="PlantCard" type="Panel"]
+[node name="PlantCard" type="Panel" unique_id=335018158]
 z_index = 1
 y_sort_enabled = true
 custom_minimum_size = Vector2(0, 80)
@@ -16,7 +16,7 @@ size_flags_horizontal = 3
 theme = ExtResource("1_nx451")
 script = ExtResource("2_lrxi1")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1580174280]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -24,31 +24,37 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PlantButton" type="Button" parent="HBoxContainer"]
+[node name="PlantButton" type="Button" parent="HBoxContainer" unique_id=1460588980]
 custom_minimum_size = Vector2(35, 20)
 layout_mode = 2
 size_flags_horizontal = 10
-icon = ExtResource("2_ki441")
 expand_icon = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+[node name="PlantSprite" type="AnimatedSprite2D" parent="HBoxContainer/PlantButton" unique_id=702606896]
+unique_name_in_owner = true
+position = Vector2(9.398944, 34.984257)
+scale = Vector2(0.1, 0.1)
+sprite_frames = ExtResource("3_ki441")
+animation = &"wind"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=926936269]
 layout_mode = 2
 size_flags_horizontal = 10
 
-[node name="PlantName" type="Label" parent="HBoxContainer/VBoxContainer"]
+[node name="PlantName" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=699830782]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 6
 theme_override_font_sizes/font_size = 13
 text = "PINK PLANT"
 
-[node name="PlantType" type="Label" parent="HBoxContainer/VBoxContainer"]
+[node name="PlantType" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=62501953]
 layout_mode = 2
 size_flags_vertical = 2
 theme_override_font_sizes/font_size = 9
 text = "Concentrating Solar"
 
-[node name="Panel" type="Panel" parent="HBoxContainer"]
+[node name="Panel" type="Panel" parent="HBoxContainer" unique_id=1804067265]
 custom_minimum_size = Vector2(180, 0)
 layout_mode = 2
 size_flags_horizontal = 8
