@@ -14,7 +14,8 @@ func _ready() -> void:
 		"level_author": "Base game",
 		"level_image" : "res://assets/sprites/map.jpg",
 		"plant_names" : ["Pink Plant", "Red Plant", "Blue Plant", "Green Plant", "Yellow Plant"],
-		"plant_types" : ["Solar", "Nuclear", "Concentrating Solar", "Hydro", "Wind"]
+		"plant_types" : ["Solar", "Nuclear", "Concentrating Solar", "Hydro", "Wind"],
+		"time_length": 20
 		
 	}
 	var save_file = FileAccess.open("res://save_files/level1.save", FileAccess.WRITE)

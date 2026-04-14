@@ -3,6 +3,8 @@ var savePath = "res://save_files"
 var saveDirectory := DirAccess.open(savePath)
 var level_file = "N/A"
 var control_mode = "cursor"
+var time_length = 0
+var current = 0
 signal level_chosen
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

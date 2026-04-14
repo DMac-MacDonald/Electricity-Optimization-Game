@@ -1,52 +1,52 @@
 [gd_scene format=3 uid="uid://in8owa3imrcv"]
 
-[ext_resource type="Theme" uid="uid://c2jvlw525itgj" path="res://assets/themeAssets/timelineTicks.tres" id="1_b8sw7"]
+[ext_resource type="ButtonGroup" uid="uid://l1epwwq51fqp" path="res://assets/scenes/ui/bottomBarGroup.tres" id="1_b8sw7"]
+[ext_resource type="Script" uid="uid://dgfan3aej0trg" path="res://assets/scripts/ui/bottom_bar.gd" id="1_oh2hv"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b8sw7"]
-bg_color = Color(0.08235294, 0.08235294, 0.08235294, 1)
+[node name="bottomBar" type="CanvasLayer" unique_id=775172423]
+script = ExtResource("1_oh2hv")
 
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_oh2hv"]
-color = Color(1, 1, 1, 1)
-grow_begin = -40.0
-thickness = 3
-vertical = true
-
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_b8sw7"]
-color = Color(1, 1, 1, 1)
-grow_begin = -20.0
-grow_end = 10.0
-thickness = 3
-vertical = true
-
-[node name="bottomBar" type="VBoxContainer" unique_id=893032899]
-offset_right = 672.0
-offset_bottom = 57.0
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2093496575]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -132.0
+offset_right = 671.0
+grow_vertical = 0
+size_flags_horizontal = 3
 theme_override_constants/separation = 0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1038261270]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1038261270]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="Button" type="Button" parent="HBoxContainer" unique_id=1709218897]
+[node name="Tab1" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1709218897]
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("1_b8sw7")
 text = "Timeline"
 
-[node name="Button2" type="Button" parent="HBoxContainer" unique_id=982186343]
+[node name="Tab2" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=982186343]
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("1_b8sw7")
 text = "Toolbox"
 
-[node name="Button3" type="Button" parent="HBoxContainer" unique_id=172401775]
+[node name="Tab3" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=172401775]
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("1_b8sw7")
 text = "Misc"
 
-[node name="Panel" type="Panel" parent="." unique_id=1920393385]
+[node name="Panel" type="Panel" parent="VBoxContainer" unique_id=1920393385]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=1708921864]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Panel" unique_id=1708921864]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -58,93 +58,6 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer" unique_id=625078947]
-layout_mode = 2
-
-[node name="ScrollContainer" type="ScrollContainer" parent="Panel/MarginContainer/VBoxContainer" unique_id=228534559]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-size_flags_vertical = 3
-horizontal_scroll_mode = 3
-vertical_scroll_mode = 0
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer" unique_id=1239776427]
-custom_minimum_size = Vector2(300, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/separation = 0
-
-[node name="TimelineSection" type="Panel" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/HBoxContainer" unique_id=1673099249]
-custom_minimum_size = Vector2(300, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_b8sw7")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/HBoxContainer/TimelineSection" unique_id=739508272]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/HBoxContainer/TimelineSection/VBoxContainer" unique_id=378581806]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_constants/separation = 0
-alignment = 1
-
-[node name="SmallTick" type="VSeparator" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/HBoxContainer/TimelineSection/VBoxContainer/HBoxContainer" unique_id=12306959]
-layout_mode = 2
-size_flags_horizontal = 3
-theme = ExtResource("1_b8sw7")
-theme_override_styles/separator = SubResource("StyleBoxLine_oh2hv")
-
-[node name="BigTick" type="VSeparator" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/HBoxContainer/TimelineSection/VBoxContainer/HBoxContainer" unique_id=1634110115]
-layout_mode = 2
-size_flags_horizontal = 3
-theme = ExtResource("1_b8sw7")
-
-[node name="SmallTick3" type="VSeparator" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/HBoxContainer/TimelineSection/VBoxContainer/HBoxContainer" unique_id=153077374]
-layout_mode = 2
-size_flags_horizontal = 3
-theme = ExtResource("1_b8sw7")
-theme_override_styles/separator = SubResource("StyleBoxLine_oh2hv")
-
-[node name="DownTick" type="VSeparator" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/HBoxContainer/TimelineSection/VBoxContainer/HBoxContainer" unique_id=1904985233]
-layout_mode = 2
-size_flags_horizontal = 3
-theme = ExtResource("1_b8sw7")
-theme_override_styles/separator = SubResource("StyleBoxLine_b8sw7")
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/HBoxContainer/TimelineSection/VBoxContainer" unique_id=1395687080]
-layout_mode = 2
-
-[node name="SmallTickLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/HBoxContainer/TimelineSection/VBoxContainer/HBoxContainer2" unique_id=324387617]
-layout_mode = 2
-size_flags_horizontal = 3
-theme = ExtResource("1_b8sw7")
-text = "1"
-horizontal_alignment = 1
-
-[node name="BigTickLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/HBoxContainer/TimelineSection/VBoxContainer/HBoxContainer2" unique_id=1686640792]
-layout_mode = 2
-size_flags_horizontal = 3
-theme = ExtResource("1_b8sw7")
-text = "2"
-horizontal_alignment = 1
-
-[node name="SmallTick2Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/HBoxContainer/TimelineSection/VBoxContainer/HBoxContainer2" unique_id=958847201]
-layout_mode = 2
-size_flags_horizontal = 3
-theme = ExtResource("1_b8sw7")
-text = "3"
-horizontal_alignment = 1
-
-[node name="DownTickLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/HBoxContainer/TimelineSection/VBoxContainer/HBoxContainer2" unique_id=1592408588]
-layout_mode = 2
-size_flags_horizontal = 3
-theme = ExtResource("1_b8sw7")
-text = "4"
-horizontal_alignment = 1
+[connection signal="toggled" from="VBoxContainer/HBoxContainer/Tab1" to="." method="_on_tab_1_toggled"]
+[connection signal="toggled" from="VBoxContainer/HBoxContainer/Tab2" to="." method="_on_tab_2_toggled"]
+[connection signal="toggled" from="VBoxContainer/HBoxContainer/Tab3" to="." method="_on_tab_3_toggled"]

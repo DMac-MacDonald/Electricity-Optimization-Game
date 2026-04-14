@@ -1,6 +1,7 @@
 extends Panel
 
 const SIDEBAR = preload("res://assets/scenes/ui/level_sidebar.tscn")
+const BOTTOMBAR = preload("res://assets/scenes/ui/bottom_bar.tscn")
 const PAUSE = preload("res://assets/scenes/ui/pause_menu.tscn")
 const PLANT = preload("res://assets/scenes/levels/PowerPlant.tscn")
 var file
@@ -10,19 +11,24 @@ func _ready() -> void:
 	randomize()
 	file = Global.level_file
 	var level_sidebar = SIDEBAR.instantiate()
+	var bottom_bar = BOTTOMBAR.instantiate()
 	add_child(level_sidebar)
+	add_child(bottom_bar)
 	load_plants(file)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("debug"):
-		var xPos = randi_range(50, 600)
-		var yPos = randi_range(50, 600)
-		var plant = PLANT.instantiate()
-		add_child(plant)
-		plant.position = Vector2(xPos,yPos)
-		print("plant spawned at : ("+ str(xPos) + "," + str(yPos) + ")")
+		Global.current += 1
+		print(Global.current)
+	#if Input.is_action_just_pressed("debug"):
+		#var xPos = randi_range(50, 600)
+		#var yPos = randi_range(50, 600)
+		#var plant = PLANT.instantiate()
+		#add_child(plant)
+		#plant.position = Vector2(xPos,yPos)
+		#print("plant spawned at : ("+ str(xPos) + "," + str(yPos) + ")")
 		
 	if Input.is_action_just_pressed("pause"):
 		var pause_menu = PAUSE.instantiate()
@@ -48,6 +54,7 @@ func load_plants(filepath):
 		plant_dict = json.data
 		pNames = plant_dict["plant_names"]
 		pTypes = plant_dict["plant_types"]
+		Global.time_length = plant_dict["time_length"]
 		spawn_plants(plant_dict)
 
 func spawn_plants(dict):

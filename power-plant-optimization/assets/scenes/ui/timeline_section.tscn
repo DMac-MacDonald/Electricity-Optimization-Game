@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://cyjtneb2pqeiq"]
+
+[ext_resource type="Script" uid="uid://m3lc7vbs3jly" path="res://assets/scripts/ui/timeline_section.gd" id="1_76h6y"]
+[ext_resource type="Theme" uid="uid://c2jvlw525itgj" path="res://assets/themeAssets/timelineTicks.tres" id="1_g5mgb"]
+[ext_resource type="Texture2D" uid="uid://c1c0ghytriagw" path="res://assets/icons/up-arrow.svg" id="2_76h6y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b8sw7"]
+bg_color = Color(0.08235294, 0.08235294, 0.08235294, 1)
+
+[node name="TimelineSection" type="Panel" unique_id=76151721]
+custom_minimum_size = Vector2(50, 0)
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_b8sw7")
+script = ExtResource("1_76h6y")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=103877129]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1559372239]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Tick" type="VSeparator" parent="VBoxContainer/HBoxContainer" unique_id=1993847665]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_g5mgb")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=1396489460]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer2" unique_id=1316277519]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = -5
+
+[node name="TickLabel" type="Label" parent="VBoxContainer/HBoxContainer2/VBoxContainer" unique_id=1615184477 groups=["tick_labels"]]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_g5mgb")
+text = "1"
+horizontal_alignment = 1
+
+[node name="Arrow" type="TextureRect" parent="VBoxContainer/HBoxContainer2/VBoxContainer" unique_id=1257384504]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_76h6y")
+expand_mode = 1

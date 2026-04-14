@@ -4,7 +4,8 @@ var PCARD = preload("res://assets/scenes/ui/plant_card.tscn")
 var SLIDE = preload("res://assets/scenes/ui/sliders.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	load_plant_cards("res://save_files/level1.save")
+	if Global.level_file != "N/A":
+		load_plant_cards(Global.savePath + "/" + Global.level_file)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

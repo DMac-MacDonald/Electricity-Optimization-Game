@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://d3roidvjoraqm"]
+
+[ext_resource type="Script" uid="uid://cyj3nkabe0me4" path="res://assets/scripts/ui/timeline.gd" id="1_e7u86"]
+
+[node name="Timeline" type="ScrollContainer" unique_id=853729776]
+custom_minimum_size = Vector2(0, 50)
+size_flags_vertical = 3
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 0
+script = ExtResource("1_e7u86")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1844473823]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 0
